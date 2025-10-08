@@ -1,4 +1,5 @@
 import React from "react";
+  import { toast } from 'react-toastify';
 
 class AddTodo extends React.Component {
   state = {
@@ -12,7 +13,7 @@ class AddTodo extends React.Component {
 
   handleAddTodo = () => {
     if(!this.state.title){
-        alert('Phải điền đủ thông tin');
+        toast.error("Thêm thất bại")
         return;
     }
     let todo = {
